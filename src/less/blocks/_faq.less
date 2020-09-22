@@ -1,0 +1,96 @@
+#answers {
+	button {
+		white-space: pre-wrap;
+	}
+
+	.card {
+		border-radius: 0;
+		border: 0;
+		border-bottom: 1px solid #EDEDED;
+	}
+
+	.card:first-child {
+		border-top: 1px solid #EDEDED;
+	}
+
+	.card-header {
+		// min-height: 80px;
+		padding: 0;
+		border-radius: 0;
+		background-color: #fff;
+		border: 0px;
+		position: relative;
+		padding-left: 0;
+
+		.arrow {
+			position: absolute;
+			right: 20px;
+			top: 10px;
+
+			@media(max-width:767px) {
+				right: 10px;
+			}
+		}
+	}
+
+	.btn-link {
+		font-size: 18px;
+		line-height: 1.39;
+		color: #000;
+		width: 100%;
+		text-align: left;
+		padding-top: 25px;
+		padding-bottom: 10px;
+		outline: none !important;
+		padding-right: 40px;
+		text-decoration: none !important;
+
+
+	}
+
+	.arrow {
+		.tr;
+		width: 40px;
+		height: 40px;
+		border: 2px solid @blue;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: @blue;
+
+		svg {
+			transform: rotate(180deg);
+		}
+
+		svg path {
+			fill: #fff;
+		}
+	}
+
+	.arrow.rotate {
+		background-color: #fff;
+
+		svg {
+			transform: rotate(0deg);
+		}
+
+
+		svg path {
+			fill: @blue;
+		}
+	}
+
+	.card-body {
+		padding-left: 0;
+		padding-bottom: 30px;
+		padding-right: 40px;
+		font-size: 16px;
+		line-height: 26px;
+		color: #000;
+
+		@media(max-width:767px) {
+			padding-right: 40px;
+		}
+	}
+}

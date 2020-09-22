@@ -1,0 +1,35 @@
+//карточка компании
+mixin serviceCard(imgSrc, icon, title, desk)
+	a(href="#" style="background:url(img/cardBg/"+ imgSrc+".jpg)").service-card&attributes(attributes)
+		.round-icon
+			+#{icon}
+		.service-card__content
+			.service-card__text
+				h3 !{title}
+				p #{desk}
+		.card-arrow
+			span Подробнее
+			span &rarr;
+
+mixin area1
+	img(src="img/svg/1.jpg", alt="icon")
+//карточка сферы работы
+mixin areaCard(title,icon, text)
+	a(href="#").area-card
+		.round-icon
+			+#{icon}
+		.area-card__content
+			h3 !{title}
+			.card-text
+				p #{text}
+
+//- уголок вниз - стрелка
+mixin upArrow
+	<svg width="25" height="25" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M10 6.61619L16.25 12.8662L15.3662 13.7499L10 8.38369L4.63375 13.7499L3.75 12.8662L10 6.61619Z" fill="#E21736"/>
+		<mask id="maskup" mask-type="alpha" maskUnits="userSpaceOnUse" x="3" y="6" width="14" height="8">
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M10 6.61619L16.25 12.8662L15.3662 13.7499L10 8.38369L4.63375 13.7499L3.75 12.8662L10 6.61619Z" fill="white"/>
+		</mask>
+		<g mask="url(#maskup)">
+		</g>
+		</svg>

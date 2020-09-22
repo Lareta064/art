@@ -1,0 +1,68 @@
+.button {
+	position: relative;
+	display: inline-block;
+	color: #fff;
+	padding-left: 30px;
+	padding-right: 30px;
+	height: 50px;
+	line-height: 50px;
+	cursor: pointer;
+	border-radius: 5px;
+
+}
+
+.button-red {
+	border-bottom: 4px solid #000;
+	background-color: @red;
+
+	span+span {
+		margin-left: 20px;
+	}
+}
+
+.button-light {
+	border: 2px solid @blue;
+	background-color: #fff;
+	color: @blue;
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		width: 0;
+		.tr;
+		background-color: rgba(76, 74, 201, 7);
+		z-index: 1;
+
+	}
+
+	span {
+		position: relative;
+		z-index: 2;
+	}
+
+	&:hover {
+		color: #fff;
+
+		&:after {
+			width: 100%;
+		}
+	}
+
+	background: rgba(238, 50, 100, .6);
+	background-color: rgb(63, 174, 42);
+	border-color: rgb(50, 139, 34);
+}
+
+.button:hover:not(:active) {
+	color: #fff;
+}
+
+.button-red:active {
+	top: 1px;
+	color: #fff;
+	border-bottom-color: transparent;
+
+}

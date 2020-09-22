@@ -1,0 +1,302 @@
+.round-icon {
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	box-shadow: 0 0 30px rgba(0, 0, 0, .4);
+	position: absolute;
+	z-index: 2;
+	background-color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: .5s;
+	overflow: hidden;
+	padding: 20px;
+}
+
+.service-card {
+	position: relative;
+	border-radius: 20px;
+	display: block;
+	height: 100%;
+	box-shadow: 0px 0px 15px 0px rgba(0, 1, 3, 0.12);
+	height: 365px;
+	padding: 40px;
+	padding-bottom: 15px;
+	padding-right: 30px;
+	display: flex;
+	align-items: center;
+
+	&.service-card--long {
+		height: 250px;
+	}
+
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: rgba(20, 108, 182, .8);
+		z-index: 1;
+		transition: .5s;
+		border-radius: 20px;
+	}
+
+	.round-icon {
+		left: 20px;
+		top: 0;
+		transform: translateY(-50%);
+	}
+}
+
+.service-card {
+	margin-bottom: 100px;
+}
+
+.service-card .service-card__content {
+	position: relative;
+	z-index: 3;
+	.tr;
+
+	.service-card__text {
+		margin-bottom: 25px;
+	}
+
+	h3 {
+		height: 85px;
+		margin-bottom: 10px;
+
+
+	}
+
+
+
+	p {
+		font-size: 16px;
+		line-height: 22px;
+		font-family: @m100;
+		color: @text;
+		height: 0;
+		overflow: hidden;
+	}
+
+}
+
+.service-card--long .service-card__content h3 {
+	height: 48px;
+}
+
+.service-card .card-arrow {
+	display: flex;
+	position: absolute;
+	left: 50px;
+	bottom: 30px;
+	z-index: 5;
+
+	span {
+		color: #fff;
+		.tr;
+	}
+
+	span:first-child {
+		width: 0;
+		overflow: hidden;
+		.tr;
+		font-family: @m500;
+	}
+
+	span:last-child {
+		font-size: 50px;
+		line-height: 0.3;
+	}
+}
+
+.service-card:hover {
+	&:after {
+		background-color: #fff;
+	}
+
+	.round-icon {
+		background-color: rgba(86, 26, 197, .8);
+	}
+
+	.service-card__text {
+		h3 {
+			color: @text;
+		}
+
+		p {
+			height: auto;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 4;
+			overflow: hidden;
+		}
+
+	}
+
+	.card-arrow {
+		span {
+			color: blue;
+		}
+
+		span:first-child {
+			width: 100px;
+			margin-right: 10px;
+		}
+	}
+}
+
+.service-card.service-card--long:hover {
+
+	.service-card__text p {
+		-webkit-line-clamp: 2;
+	}
+}
+
+@media(max-width:1439px) {
+	.service-card.service-card--long {
+
+
+		h3 {
+			height: auto;
+		}
+	}
+
+	.service-card .service-card__text {
+		h3 {
+			font-size: 30px;
+			height: auto;
+		}
+	}
+
+	.round-icon {
+		width: 100px;
+		height: 100px;
+	}
+}
+
+@media(max-width:1199px) {
+	.service-card {
+		padding: 20px;
+	}
+
+	.service-card.service-card--long {
+		height: 360px;
+	}
+
+	&.service-card--long {
+
+
+		h3 {
+			height: auto;
+		}
+	}
+
+	.service-card__text {
+		h3 {
+			font-size: 28px;
+			height: auto;
+		}
+	}
+
+	.round-icon {
+		width: 100px;
+		height: 100px;
+	}
+}
+
+@media(max-width:991px) {
+	.service-card {
+
+		height: 250px;
+		max-width: 700px;
+		margin-left: auto;
+		margin-right: auto;
+
+
+		&.service-card--long {
+			height: 250px;
+
+		}
+
+
+
+		.round-icon {
+			width: 90px;
+			height: 90px;
+		}
+	}
+
+	.service-card.service-card--long:hover {
+
+		.service-card__text p {
+			-webkit-line-clamp: 4;
+		}
+	}
+}
+
+@media(max-width:767px) {
+
+	.service-card,
+	.service-card.service-card--long {
+		height: 350px;
+	}
+}
+
+.area-card {
+	text-align: center;
+	.tr;
+	display: block;
+	border-radius: 10px;
+	box-shadow: 0 0 30px rgba(0, 0, 0, .4);
+	padding: 30px;
+	padding-top: 100px;
+
+	.round-icon {
+		left: 50%;
+		top: 0;
+		z-index: 2;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.area-card:hover {
+	background-color: @blue;
+}
+
+// case-card
+.case-card {
+	display: block;
+	position: relative;
+	padding: 30px;
+	// border-radius: 20px;
+	.bsh;
+	border-top: 5px solid @blue;
+
+	.card-logo {
+		position: absolute;
+		top: 30px;
+		right: 30px;
+		border-radius: 10px;
+		background-color: #fff;
+		z-index: 2;
+	}
+
+	.case-card__img {
+		height: 200px;
+		border-radius: 20px;
+		margin-bottom: 20px;
+		border: 1px solid red;
+	}
+}
+
+.service-card h3 {
+	font-size: 36px;
+	line-height: 1.222;
+	font-family: @pr;
+	color: #fff;
+}
